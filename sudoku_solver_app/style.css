@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 91%);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sudokuHeader h1{
+    color: orange
+}
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 20px; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end ;
+}
+  
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.sudokuGrid{
+    margin: 20px;
+}
+.button1{
+    width: 25%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 3px solid black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+input {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+input:hover{
+    background-color: lightgray;
+}
+.solveButton{
+    background-color: cyan
+}
+.clearButton{
+    background-color: grey(255, 3, 3);
+}
+.solveButton, .clearButton{
+    cursor: pointer;
+    font-size: 25px;
+    width: 100px;
+    height: 60px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:450px) {
+    td {
+        border: 2px solid black;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
+    input {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: none;
+    }
+    .typewriter h1 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 20; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end ;
+    }
+      
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    .sudokuGrid{
+        margin: 10px;
+    }
+    .button1{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+    .solveButton{
+        background-color: rgb(31, 231, 31);
+    }
+    .clearButton{
+        background-color:grey(255, 3, 3);
+    }
+    .solveButton,.clearButton{
+        width: 70px;
+        height: 30px;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+    @media screen and (max-width:330px) {
+        
+        .sudokuHeader h1{
+            margin: 0px;
+            font-size: 25px;
+            font-family: cursive;
+        }
+        
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 20; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end ;
+        }
+        
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+    }
+}
